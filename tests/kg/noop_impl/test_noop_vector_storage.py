@@ -34,9 +34,10 @@ def make_storage(embedding: FailingEmbedding) -> NoopVectorDBStorage:
 
 
 def test_noop_vector_storage_is_registered() -> None:
-    assert "NoopVectorDBStorage" in STORAGE_IMPLEMENTATIONS["VECTOR_STORAGE"][
-        "implementations"
-    ]
+    assert (
+        "NoopVectorDBStorage"
+        in STORAGE_IMPLEMENTATIONS["VECTOR_STORAGE"]["implementations"]
+    )
     assert STORAGES["NoopVectorDBStorage"] == ".kg.noop_vector_db_impl"
     assert get_storage_class("NoopVectorDBStorage") is NoopVectorDBStorage
 
