@@ -1,0 +1,29 @@
+{
+  "commit": "a56b4dc",
+  "baseline_median_seconds": 0.08505942858755589,
+  "noop_median_seconds": 5.5423006415367126e-05,
+  "noop_to_baseline_ratio": 0.0006515798111471849,
+  "speedup": 1534.7314064863049,
+  "baseline_embedding_calls_per_repeat": [
+    24,
+    24,
+    24,
+    24,
+    24
+  ],
+  "noop_embedding_calls_per_repeat": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "baseline_materialized_records_per_repeat": [
+    768,
+    768,
+    768,
+    768,
+    768
+  ],
+  "performance_gate_passed": true
+}

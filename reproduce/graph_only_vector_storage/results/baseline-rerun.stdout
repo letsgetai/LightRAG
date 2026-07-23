@@ -1,0 +1,48 @@
+{
+  "mode": "nano",
+  "records_per_namespace": 256,
+  "namespaces": 3,
+  "batch_size": 32,
+  "embedding_delay_ms": 50.0,
+  "repeats": 5,
+  "median_seconds": 0.08484494872391224,
+  "min_seconds": 0.08299813605844975,
+  "max_seconds": 0.08568993024528027,
+  "samples": [
+    {
+      "mode": "nano",
+      "elapsed_seconds": 0.08484494872391224,
+      "embedding_calls": 24,
+      "embedded_texts": 768,
+      "materialized_records": 768
+    },
+    {
+      "mode": "nano",
+      "elapsed_seconds": 0.08452623710036278,
+      "embedding_calls": 24,
+      "embedded_texts": 768,
+      "materialized_records": 768
+    },
+    {
+      "mode": "nano",
+      "elapsed_seconds": 0.08545696176588535,
+      "embedding_calls": 24,
+      "embedded_texts": 768,
+      "materialized_records": 768
+    },
+    {
+      "mode": "nano",
+      "elapsed_seconds": 0.08299813605844975,
+      "embedding_calls": 24,
+      "embedded_texts": 768,
+      "materialized_records": 768
+    },
+    {
+      "mode": "nano",
+      "elapsed_seconds": 0.08568993024528027,
+      "embedding_calls": 24,
+      "embedded_texts": 768,
+      "materialized_records": 768
+    }
+  ]
+}

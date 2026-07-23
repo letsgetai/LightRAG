@@ -1,2 +1,4 @@
 commit	metric_seconds	status	description
 bc61cec	0.08699700236320496	keep	NanoVectorDB baseline; 768 records, 24 embedding calls, 50 ms simulated latency
+a56b4dc	0.08505942858755589	keep	Same-environment NanoVectorDB baseline rerun; 768 records and 24 embedding calls
+a56b4dc	0.000055423006415367126	keep	NoopVectorDBStorage treatment; 768 accepted records and zero embedding calls

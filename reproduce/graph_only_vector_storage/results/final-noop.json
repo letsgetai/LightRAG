@@ -1,0 +1,48 @@
+{
+  "mode": "noop",
+  "records_per_namespace": 256,
+  "namespaces": 3,
+  "batch_size": 32,
+  "embedding_delay_ms": 50.0,
+  "repeats": 5,
+  "median_seconds": 5.5423006415367126e-05,
+  "min_seconds": 5.2873045206069946e-05,
+  "max_seconds": 8.254870772361755e-05,
+  "samples": [
+    {
+      "mode": "noop",
+      "elapsed_seconds": 8.254870772361755e-05,
+      "embedding_calls": 0,
+      "embedded_texts": 0,
+      "materialized_records": 0
+    },
+    {
+      "mode": "noop",
+      "elapsed_seconds": 5.807541310787201e-05,
+      "embedding_calls": 0,
+      "embedded_texts": 0,
+      "materialized_records": 0
+    },
+    {
+      "mode": "noop",
+      "elapsed_seconds": 5.5303797125816345e-05,
+      "embedding_calls": 0,
+      "embedded_texts": 0,
+      "materialized_records": 0
+    },
+    {
+      "mode": "noop",
+      "elapsed_seconds": 5.2873045206069946e-05,
+      "embedding_calls": 0,
+      "embedded_texts": 0,
+      "materialized_records": 0
+    },
+    {
+      "mode": "noop",
+      "elapsed_seconds": 5.5423006415367126e-05,
+      "embedding_calls": 0,
+      "embedded_texts": 0,
+      "materialized_records": 0
+    }
+  ]
+}
