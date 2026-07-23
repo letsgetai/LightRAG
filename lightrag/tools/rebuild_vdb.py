@@ -761,6 +761,29 @@ class RebuildTool:
             self.text_chunks,
         ]
 
+    def vector_rebuild_unavailable_reason(self) -> str | None:
+        vector_storages = (
+            self.entities_vdb,
+            self.relationships_vdb,
+            self.chunks_vdb,
+        )
+        unsupported_storage_names = sorted(
+            {
+                type(storage).__name__
+                for storage in vector_storages
+                if storage is not None
+                and not getattr(storage, "supports_vector_queries", True)
+            }
+        )
+        if not unsupported_storage_names:
+            return None
+
+        storage_names = ", ".join(unsupported_storage_names)
+        return (
+            f"{storage_names} does not persist vectors. Configure a persistent "
+            "vector storage before running `lightrag-rebuild-vdb`."
+        )
+
     # ------------------------------------------------------------------
     # CLI helpers
     # ------------------------------------------------------------------
@@ -973,12 +996,15 @@ class RebuildTool:
                 return False
 
             while True:
+                rebuild_unavailable_reason = self.vector_rebuild_unavailable_reason()
                 print("\n=== Rebuild Options ===")
                 print("[1] Consistency check (diagnose only; no rebuild)")
-                if self.embedding_available:
+                if self.embedding_available and rebuild_unavailable_reason is None:
                     print("[2] Rebuild entities + relationships VDB")
                     print("[3] Rebuild chunks VDB")
                     print("[4] Rebuild ALL vector storages")
+                elif rebuild_unavailable_reason is not None:
+                    print(f"[2-4] (unavailable - {rebuild_unavailable_reason})")
                 else:
                     print("[2-4] (unavailable - embedding requires the api extra)")
                 print("[0] Exit")
@@ -998,6 +1024,10 @@ class RebuildTool:
                         "✗ Rebuild unavailable in check-only mode. "
                         'Install the api extra: pip install "lightrag-hku[api]"'
                     )
+                    continue
+                if rebuild_unavailable_reason is not None:
+                    print(f"✗ Rebuild unavailable: {rebuild_unavailable_reason}")
+                    success = False
                     continue
 
                 include_graph = choice in ("2", "4")

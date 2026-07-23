@@ -3,7 +3,7 @@ from unittest.mock import AsyncMock
 import numpy as np
 import pytest
 
-from lightrag import LightRAG
+from lightrag import LightRAG, QueryParam
 from lightrag.kg import STORAGE_IMPLEMENTATIONS, STORAGES
 from lightrag.kg.factory import get_storage_class
 from lightrag.kg.noop_vector_db_impl import NoopVectorDBStorage
@@ -149,5 +149,31 @@ async def test_graph_only_lightrag_initializes_without_embedding_func(tmp_path) 
     assert isinstance(rag.entities_vdb, NoopVectorDBStorage)
     assert isinstance(rag.relationships_vdb, NoopVectorDBStorage)
     assert isinstance(rag.chunks_vdb, NoopVectorDBStorage)
+
+    await rag.finalize_storages()
+
+
+@pytest.mark.offline
+@pytest.mark.asyncio
+@pytest.mark.parametrize("query_method", ["aquery", "aquery_data", "aquery_llm"])
+async def test_graph_only_public_query_apis_fail_loudly(
+    tmp_path, query_method: str
+) -> None:
+    rag = LightRAG(
+        working_dir=str(tmp_path),
+        vector_storage="NoopVectorDBStorage",
+        llm_model_func=AsyncMock(return_value=""),
+        embedding_func=None,
+    )
+    await rag.initialize_storages()
+
+    with pytest.raises(
+        RuntimeError,
+        match="NoopVectorDBStorage.*persistent vector storage.*lightrag-rebuild-vdb",
+    ):
+        await getattr(rag, query_method)(
+            "question",
+            QueryParam(mode="naive"),
+        )
 
     await rag.finalize_storages()

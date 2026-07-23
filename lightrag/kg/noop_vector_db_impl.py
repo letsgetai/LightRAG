@@ -1,7 +1,7 @@
 """No-op vector storage for graph-only ingestion workflows."""
 
 from dataclasses import dataclass
-from typing import Any, final
+from typing import Any, ClassVar, final
 
 from lightrag.base import BaseVectorStorage
 
@@ -15,6 +15,8 @@ class NoopVectorDBStorage(BaseVectorStorage):
     Configure a persistent vector backend and run ``lightrag-rebuild-vdb``
     before using retrieval modes that query vector indexes.
     """
+
+    supports_vector_queries: ClassVar[bool] = False
 
     async def query(
         self,
