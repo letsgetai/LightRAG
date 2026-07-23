@@ -638,7 +638,7 @@ knowledge graph before building vector indexes:
 rag = LightRAG(
     working_dir=WORKING_DIR,
     llm_model_func=llm_model_func,
-    embedding_func=embedding_func,
+    embedding_func=None,
     vector_storage="NoopVectorDBStorage",
 )
 ```

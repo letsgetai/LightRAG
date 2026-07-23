@@ -132,3 +132,22 @@ async def test_graph_only_custom_kg_insertion_preserves_graph(tmp_path) -> None:
     assert embedding.call_count == 0
 
     await rag.finalize_storages()
+
+
+@pytest.mark.offline
+@pytest.mark.asyncio
+async def test_graph_only_lightrag_initializes_without_embedding_func(tmp_path) -> None:
+    rag = LightRAG(
+        working_dir=str(tmp_path),
+        vector_storage="NoopVectorDBStorage",
+        llm_model_func=AsyncMock(return_value=""),
+        embedding_func=None,
+    )
+
+    await rag.initialize_storages()
+
+    assert isinstance(rag.entities_vdb, NoopVectorDBStorage)
+    assert isinstance(rag.relationships_vdb, NoopVectorDBStorage)
+    assert isinstance(rag.chunks_vdb, NoopVectorDBStorage)
+
+    await rag.finalize_storages()
