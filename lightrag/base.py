@@ -16,6 +16,7 @@ from typing import (
     Dict,
     List,
     AsyncIterator,
+    ClassVar,
 )
 from .utils import EmbeddingFunc, get_env_value
 from .types import KnowledgeGraph
@@ -225,6 +226,8 @@ class StorageNameSpace(ABC):
 
 @dataclass
 class BaseVectorStorage(StorageNameSpace, ABC):
+    supports_vector_queries: ClassVar[bool] = True
+
     embedding_func: EmbeddingFunc
     cosine_better_than_threshold: float = field(default=0.2)
     meta_fields: set[str] = field(default_factory=set)
