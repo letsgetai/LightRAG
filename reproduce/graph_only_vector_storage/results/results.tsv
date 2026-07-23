@@ -1,0 +1,2 @@
+commit	metric_seconds	status	description
+bc61cec	0.08699700236320496	keep	NanoVectorDB baseline; 768 records, 24 embedding calls, 50 ms simulated latency
