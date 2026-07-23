@@ -125,9 +125,9 @@ async def test_graph_only_custom_kg_insertion_preserves_graph(tmp_path) -> None:
         }
     )
 
-    assert await rag.chunk_entity_relation_graph.has_node("ALICE")
-    assert await rag.chunk_entity_relation_graph.has_node("BOB")
-    assert await rag.chunk_entity_relation_graph.has_edge("ALICE", "BOB")
+    assert await rag.chunk_entity_relation_graph.has_node("Alice")
+    assert await rag.chunk_entity_relation_graph.has_node("Bob")
+    assert await rag.chunk_entity_relation_graph.has_edge("Alice", "Bob")
     assert embedding.call_count == 0
 
     await rag.finalize_storages()
