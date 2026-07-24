@@ -1,0 +1,265 @@
+INFO: [] Created new empty graph file: /tmp/lightrag-deferred-lyrwicdn/graph_chunk_entity_relation.graphml
+INFO: Role LLM Configuration (initialized):
+INFO:  - extract: None/None, host=None, max_async=4, timeout=240
+INFO:  - keyword: None/None, host=None, max_async=4, timeout=240
+INFO:  - query: None/None, host=None, max_async=4, timeout=240
+INFO:  - vlm: None/None, host=None, max_async=4, timeout=240
+INFO: [] Process 374991 KV load full_docs with 0 records
+INFO: [] Process 374991 KV load text_chunks with 0 records
+INFO: [] Process 374991 KV load full_entities with 0 records
+INFO: [] Process 374991 KV load full_relations with 0 records
+INFO: [] Process 374991 KV load entity_chunks with 0 records
+INFO: [] Process 374991 KV load relation_chunks with 0 records
+INFO: [] Process 374991 KV load llm_response_cache with 0 records
+INFO: [] Process 374991 doc status load doc_status with 0 records
+INFO: [] Writing graph with 300 nodes, 300 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 400 nodes, 400 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 500 nodes, 500 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 600 nodes, 600 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 700 nodes, 700 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 800 nodes, 800 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 900 nodes, 900 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 1000 nodes, 1000 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 1100 nodes, 1100 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 1200 nodes, 1200 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 1300 nodes, 1300 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 1400 nodes, 1400 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 1500 nodes, 1500 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 1600 nodes, 1600 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 1700 nodes, 1700 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 1800 nodes, 1800 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 1900 nodes, 1900 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 2000 nodes, 2000 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 2100 nodes, 2100 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 2200 nodes, 2200 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 2300 nodes, 2300 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 2400 nodes, 2400 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 2500 nodes, 2500 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 2600 nodes, 2600 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 2700 nodes, 2700 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 2800 nodes, 2800 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 2900 nodes, 2900 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 3000 nodes, 3000 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 3100 nodes, 3100 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 3200 nodes, 3200 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 3300 nodes, 3300 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 3400 nodes, 3400 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 3500 nodes, 3500 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 3600 nodes, 3600 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 3700 nodes, 3700 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 3800 nodes, 3800 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 3900 nodes, 3900 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 4000 nodes, 4000 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 4100 nodes, 4100 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 4200 nodes, 4200 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 4300 nodes, 4300 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 4400 nodes, 4400 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 4500 nodes, 4500 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 4600 nodes, 4600 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 4700 nodes, 4700 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 4800 nodes, 4800 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 4900 nodes, 4900 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 5000 nodes, 5000 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 5100 nodes, 5100 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 5200 nodes, 5200 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 5300 nodes, 5300 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 5400 nodes, 5400 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 5500 nodes, 5500 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 5600 nodes, 5600 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 5700 nodes, 5700 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 5800 nodes, 5800 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 5900 nodes, 5900 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 6000 nodes, 6000 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 6100 nodes, 6100 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 6200 nodes, 6200 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 6300 nodes, 6300 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 6400 nodes, 6400 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 6500 nodes, 6500 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 6600 nodes, 6600 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 6700 nodes, 6700 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 6800 nodes, 6800 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 6900 nodes, 6900 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 7000 nodes, 7000 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 7100 nodes, 7100 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 7200 nodes, 7200 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 7300 nodes, 7300 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 7400 nodes, 7400 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 7500 nodes, 7500 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 7600 nodes, 7600 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 7700 nodes, 7700 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 7800 nodes, 7800 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 7900 nodes, 7900 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 8000 nodes, 8000 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 8100 nodes, 8100 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 8200 nodes, 8200 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 8300 nodes, 8300 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 8400 nodes, 8400 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 8500 nodes, 8500 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 8600 nodes, 8600 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 8700 nodes, 8700 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 8800 nodes, 8800 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 8900 nodes, 8900 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 9000 nodes, 9000 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 9100 nodes, 9100 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 9200 nodes, 9200 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 9300 nodes, 9300 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 9400 nodes, 9400 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 9500 nodes, 9500 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 9600 nodes, 9600 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 9700 nodes, 9700 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 9800 nodes, 9800 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 9900 nodes, 9900 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 10000 nodes, 10000 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 10100 nodes, 10100 edges
+INFO: In memory DB persist to disk
+INFO: [] Writing graph with 10200 nodes, 10200 edges
+INFO: In memory DB persist to disk
+INFO: Successfully finalized 12 storages
+INFO: [] Loaded graph from /tmp/lightrag-deferred-lyrwicdn/graph_chunk_entity_relation.graphml with 10200 nodes, 10200 edges
+INFO:nano-vectordb:Init {'embedding_dim': 8, 'metric': 'cosine', 'storage_file': '/tmp/lightrag-deferred-lyrwicdn/vdb_entities.json'} 0 data
+INFO:nano-vectordb:Init {'embedding_dim': 8, 'metric': 'cosine', 'storage_file': '/tmp/lightrag-deferred-lyrwicdn/vdb_relationships.json'} 0 data
+INFO:nano-vectordb:Init {'embedding_dim': 8, 'metric': 'cosine', 'storage_file': '/tmp/lightrag-deferred-lyrwicdn/vdb_chunks.json'} 0 data
+INFO: Role LLM Configuration (initialized):
+INFO:  - extract: None/None, host=None, max_async=4, timeout=240
+INFO:  - keyword: None/None, host=None, max_async=4, timeout=240
+INFO:  - query: None/None, host=None, max_async=4, timeout=240
+INFO:  - vlm: None/None, host=None, max_async=4, timeout=240
+INFO:nano-vectordb:Init {'embedding_dim': 8, 'metric': 'cosine', 'storage_file': '/tmp/lightrag-deferred-lyrwicdn/vdb_entities.json'} 0 data
+INFO: [] Process 374991 drop entities(file:/tmp/lightrag-deferred-lyrwicdn/vdb_entities.json)
+INFO: Dropped entities vector storage
+INFO: [] entities flush: embedding 5000 vectors in 79 batch(es) (batch_num=64)
+INFO: Embedding func: 8 new workers initialized (Timeouts: Func: 30s, Worker: 60s, Health Check: 75s)
+INFO: [] entities flush: embedding 5000 vectors in 79 batch(es) (batch_num=64)
+INFO: [] entities flush: embedding 200 vectors in 4 batch(es) (batch_num=64)
+INFO:nano-vectordb:Init {'embedding_dim': 8, 'metric': 'cosine', 'storage_file': '/tmp/lightrag-deferred-lyrwicdn/vdb_relationships.json'} 0 data
+INFO: [] Process 374991 drop relationships(file:/tmp/lightrag-deferred-lyrwicdn/vdb_relationships.json)
+INFO: Dropped relationships vector storage
+INFO: [] relationships flush: embedding 5000 vectors in 79 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 5000 vectors in 79 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 200 vectors in 4 batch(es) (batch_num=64)
+INFO:nano-vectordb:Init {'embedding_dim': 8, 'metric': 'cosine', 'storage_file': '/tmp/lightrag-deferred-lyrwicdn/vdb_chunks.json'} 0 data
+INFO: [] Process 374991 drop chunks(file:/tmp/lightrag-deferred-lyrwicdn/vdb_chunks.json)
+INFO: Dropped chunks vector storage
+INFO: [] chunks flush: embedding 100 vectors in 2 batch(es) (batch_num=64)
+INFO: Successfully finalized 12 storages
+	Command being timed: ".venv/bin/python reproduce/graph_only_vector_storage/large_graph_benchmark.py --mode deferred --documents 100 --shared-entities 200 --unique-entities 100 --embedding-batch-size 64 --rebuild-batch-size 500 --embedding-delay-ms 10 --output reproduce/graph_only_vector_storage/results/large_graph/100docs-deferred-r3.json"
+	User time (seconds): 44.05
+	System time (seconds): 0.95
+	Percent of CPU this job got: 121%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:36.98
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 367736
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 170172
+	Voluntary context switches: 203
+	Involuntary context switches: 388
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 729944
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

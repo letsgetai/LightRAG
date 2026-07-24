@@ -1,0 +1,23 @@
+{
+  "mode": "baseline",
+  "documents": 20,
+  "shared_entities": 100,
+  "unique_entities_per_document": 50,
+  "embedding_batch_size": 64,
+  "embedding_delay_ms": 10.0,
+  "graph": {
+    "nodes": 1100,
+    "edges": 1100,
+    "chunks": 20
+  },
+  "ingest_seconds": 1.2327108979225159,
+  "rebuild_seconds": 0.0,
+  "total_seconds": 1.2327108979225159,
+  "ingestion_embedding_calls": 140,
+  "ingestion_embedded_texts": 6020,
+  "total_embedding_calls": 140,
+  "total_embedded_texts": 6020,
+  "final_vector_records": 2220,
+  "vector_write_amplification": 2.7117117117117115,
+  "rebuild_stats": []
+}

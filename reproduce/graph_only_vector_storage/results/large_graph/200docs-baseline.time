@@ -1,0 +1,1042 @@
+INFO: [] Created new empty graph file: /tmp/lightrag-baseline-5t9vkff8/graph_chunk_entity_relation.graphml
+INFO:nano-vectordb:Init {'embedding_dim': 8, 'metric': 'cosine', 'storage_file': '/tmp/lightrag-baseline-5t9vkff8/vdb_entities.json'} 0 data
+INFO:nano-vectordb:Init {'embedding_dim': 8, 'metric': 'cosine', 'storage_file': '/tmp/lightrag-baseline-5t9vkff8/vdb_relationships.json'} 0 data
+INFO:nano-vectordb:Init {'embedding_dim': 8, 'metric': 'cosine', 'storage_file': '/tmp/lightrag-baseline-5t9vkff8/vdb_chunks.json'} 0 data
+INFO: Role LLM Configuration (initialized):
+INFO:  - extract: None/None, host=None, max_async=4, timeout=240
+INFO:  - keyword: None/None, host=None, max_async=4, timeout=240
+INFO:  - query: None/None, host=None, max_async=4, timeout=240
+INFO:  - vlm: None/None, host=None, max_async=4, timeout=240
+INFO: [] Process 387644 KV load full_docs with 0 records
+INFO: [] Process 387644 KV load text_chunks with 0 records
+INFO: [] Process 387644 KV load full_entities with 0 records
+INFO: [] Process 387644 KV load full_relations with 0 records
+INFO: [] Process 387644 KV load entity_chunks with 0 records
+INFO: [] Process 387644 KV load relation_chunks with 0 records
+INFO: [] Process 387644 KV load llm_response_cache with 0 records
+INFO: [] Process 387644 doc status load doc_status with 0 records
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: Embedding func: 8 new workers initialized (Timeouts: Func: 30s, Worker: 60s, Health Check: 75s)
+INFO: [] Writing graph with 500 nodes, 500 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 600 nodes, 600 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 700 nodes, 700 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 800 nodes, 800 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 900 nodes, 900 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 1000 nodes, 1000 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 1100 nodes, 1100 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 1200 nodes, 1200 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 1300 nodes, 1300 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 1400 nodes, 1400 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 1500 nodes, 1500 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 1600 nodes, 1600 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 1700 nodes, 1700 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 1800 nodes, 1800 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 1900 nodes, 1900 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 2000 nodes, 2000 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 2100 nodes, 2100 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 2200 nodes, 2200 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 2300 nodes, 2300 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 2400 nodes, 2400 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 2500 nodes, 2500 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 2600 nodes, 2600 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 2700 nodes, 2700 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 2800 nodes, 2800 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 2900 nodes, 2900 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 3000 nodes, 3000 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 3100 nodes, 3100 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 3200 nodes, 3200 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 3300 nodes, 3300 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 3400 nodes, 3400 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 3500 nodes, 3500 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 3600 nodes, 3600 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 3700 nodes, 3700 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 3800 nodes, 3800 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 3900 nodes, 3900 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 4000 nodes, 4000 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 4100 nodes, 4100 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 4200 nodes, 4200 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 4300 nodes, 4300 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 4400 nodes, 4400 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 4500 nodes, 4500 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 4600 nodes, 4600 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 4700 nodes, 4700 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 4800 nodes, 4800 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 4900 nodes, 4900 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 5000 nodes, 5000 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 5100 nodes, 5100 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 5200 nodes, 5200 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 5300 nodes, 5300 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 5400 nodes, 5400 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 5500 nodes, 5500 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 5600 nodes, 5600 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 5700 nodes, 5700 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 5800 nodes, 5800 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 5900 nodes, 5900 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 6000 nodes, 6000 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 6100 nodes, 6100 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 6200 nodes, 6200 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 6300 nodes, 6300 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 6400 nodes, 6400 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 6500 nodes, 6500 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 6600 nodes, 6600 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 6700 nodes, 6700 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 6800 nodes, 6800 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 6900 nodes, 6900 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 7000 nodes, 7000 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 7100 nodes, 7100 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 7200 nodes, 7200 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 7300 nodes, 7300 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 7400 nodes, 7400 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 7500 nodes, 7500 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 7600 nodes, 7600 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 7700 nodes, 7700 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 7800 nodes, 7800 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 7900 nodes, 7900 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 8000 nodes, 8000 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 8100 nodes, 8100 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 8200 nodes, 8200 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 8300 nodes, 8300 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 8400 nodes, 8400 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 8500 nodes, 8500 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 8600 nodes, 8600 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 8700 nodes, 8700 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 8800 nodes, 8800 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 8900 nodes, 8900 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 9000 nodes, 9000 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 9100 nodes, 9100 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 9200 nodes, 9200 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 9300 nodes, 9300 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 9400 nodes, 9400 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 9500 nodes, 9500 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 9600 nodes, 9600 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 9700 nodes, 9700 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 9800 nodes, 9800 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 9900 nodes, 9900 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 10000 nodes, 10000 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 10100 nodes, 10100 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 10200 nodes, 10200 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 10300 nodes, 10300 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 10400 nodes, 10400 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 10500 nodes, 10500 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 10600 nodes, 10600 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 10700 nodes, 10700 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 10800 nodes, 10800 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 10900 nodes, 10900 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 11000 nodes, 11000 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 11100 nodes, 11100 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 11200 nodes, 11200 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 11300 nodes, 11300 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 11400 nodes, 11400 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 11500 nodes, 11500 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 11600 nodes, 11600 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 11700 nodes, 11700 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 11800 nodes, 11800 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 11900 nodes, 11900 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 12000 nodes, 12000 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 12100 nodes, 12100 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 12200 nodes, 12200 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 12300 nodes, 12300 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 12400 nodes, 12400 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 12500 nodes, 12500 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 12600 nodes, 12600 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 12700 nodes, 12700 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 12800 nodes, 12800 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 12900 nodes, 12900 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 13000 nodes, 13000 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 13100 nodes, 13100 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 13200 nodes, 13200 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 13300 nodes, 13300 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 13400 nodes, 13400 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 13500 nodes, 13500 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 13600 nodes, 13600 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 13700 nodes, 13700 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 13800 nodes, 13800 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 13900 nodes, 13900 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 14000 nodes, 14000 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 14100 nodes, 14100 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 14200 nodes, 14200 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 14300 nodes, 14300 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 14400 nodes, 14400 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 14500 nodes, 14500 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 14600 nodes, 14600 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 14700 nodes, 14700 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 14800 nodes, 14800 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 14900 nodes, 14900 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 15000 nodes, 15000 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 15100 nodes, 15100 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 15200 nodes, 15200 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 15300 nodes, 15300 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 15400 nodes, 15400 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 15500 nodes, 15500 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 15600 nodes, 15600 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 15700 nodes, 15700 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 15800 nodes, 15800 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 15900 nodes, 15900 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 16000 nodes, 16000 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 16100 nodes, 16100 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 16200 nodes, 16200 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 16300 nodes, 16300 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 16400 nodes, 16400 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 16500 nodes, 16500 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 16600 nodes, 16600 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 16700 nodes, 16700 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 16800 nodes, 16800 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 16900 nodes, 16900 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 17000 nodes, 17000 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 17100 nodes, 17100 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 17200 nodes, 17200 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 17300 nodes, 17300 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 17400 nodes, 17400 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 17500 nodes, 17500 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 17600 nodes, 17600 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 17700 nodes, 17700 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 17800 nodes, 17800 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 17900 nodes, 17900 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 18000 nodes, 18000 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 18100 nodes, 18100 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 18200 nodes, 18200 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 18300 nodes, 18300 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 18400 nodes, 18400 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 18500 nodes, 18500 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 18600 nodes, 18600 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 18700 nodes, 18700 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 18800 nodes, 18800 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 18900 nodes, 18900 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 19000 nodes, 19000 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 19100 nodes, 19100 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 19200 nodes, 19200 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 19300 nodes, 19300 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 19400 nodes, 19400 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 19500 nodes, 19500 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 19600 nodes, 19600 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 19700 nodes, 19700 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 19800 nodes, 19800 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 19900 nodes, 19900 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 20000 nodes, 20000 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 20100 nodes, 20100 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 20200 nodes, 20200 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 20300 nodes, 20300 edges
+INFO: In memory DB persist to disk
+INFO: [] entities flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] relationships flush: embedding 500 vectors in 8 batch(es) (batch_num=64)
+INFO: [] chunks flush: embedding 1 vectors in 1 batch(es) (batch_num=64)
+INFO: [] Writing graph with 20400 nodes, 20400 edges
+INFO: In memory DB persist to disk
+INFO: Successfully finalized 12 storages
+	Command being timed: ".venv/bin/python reproduce/graph_only_vector_storage/large_graph_benchmark.py --mode baseline --documents 200 --shared-entities 400 --unique-entities 100 --embedding-batch-size 64 --rebuild-batch-size 500 --embedding-delay-ms 10 --output reproduce/graph_only_vector_storage/results/large_graph/200docs-baseline.json"
+	User time (seconds): 174.92
+	System time (seconds): 4.53
+	Percent of CPU this job got: 104%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:51.11
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 310552
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 437913
+	Voluntary context switches: 475
+	Involuntary context switches: 2080
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 5943000
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

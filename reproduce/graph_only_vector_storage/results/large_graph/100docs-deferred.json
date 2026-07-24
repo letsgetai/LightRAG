@@ -1,0 +1,60 @@
+{
+  "mode": "deferred",
+  "documents": 100,
+  "shared_entities": 200,
+  "unique_entities_per_document": 100,
+  "embedding_batch_size": 64,
+  "embedding_delay_ms": 10.0,
+  "graph": {
+    "nodes": 10200,
+    "edges": 10200,
+    "chunks": 100
+  },
+  "ingest_seconds": 32.55810720846057,
+  "rebuild_seconds": 1.7362575326114893,
+  "total_seconds": 34.29436474107206,
+  "ingestion_embedding_calls": 0,
+  "ingestion_embedded_texts": 0,
+  "total_embedding_calls": 326,
+  "total_embedded_texts": 20500,
+  "final_vector_records": 20500,
+  "vector_write_amplification": 1.0,
+  "rebuild_stats": [
+    {
+      "label": "entities",
+      "source_total": 10200,
+      "prepared": 10200,
+      "rebuilt": 10200,
+      "staged": 0,
+      "skipped": 0,
+      "duplicates": 0,
+      "batches": 21,
+      "failed_batches": 0,
+      "errors": []
+    },
+    {
+      "label": "relationships",
+      "source_total": 10200,
+      "prepared": 10200,
+      "rebuilt": 10200,
+      "staged": 0,
+      "skipped": 0,
+      "duplicates": 0,
+      "batches": 21,
+      "failed_batches": 0,
+      "errors": []
+    },
+    {
+      "label": "chunks",
+      "source_total": 100,
+      "prepared": 100,
+      "rebuilt": 100,
+      "staged": 0,
+      "skipped": 0,
+      "duplicates": 0,
+      "batches": 1,
+      "failed_batches": 0,
+      "errors": []
+    }
+  ]
+}
