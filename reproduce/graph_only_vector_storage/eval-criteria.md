@@ -33,3 +33,48 @@ A built-in no-op vector storage lets LightRAG complete graph-first ingestion wit
 ## Promotion rule
 
 Promote the implementation to the pull-request branch only when every correctness gate passes and the treatment meets the performance gate.
+
+## Large-graph backfill benchmark
+
+### Motivation
+
+The main target is an initial backfill where common entities and relationships
+are updated by many documents. A normal vector backend persists intermediate
+versions after each document, while graph-only ingestion can embed only the
+final graph state during one rebuild.
+
+### Frozen workload
+
+- Use the production `LightRAG.ainsert_custom_kg` storage path.
+- Use `NetworkXStorage`, JSON KV stores, and `NanoVectorDBStorage`.
+- Each document contains shared entities/relationships plus document-unique
+  entities/relationships and one unique chunk.
+- Flush after every document, matching the normal durable document commit.
+- Baseline: persistent vector storage during every document insertion.
+- Treatment: `NoopVectorDBStorage` during insertion, followed by one rebuild
+  into `NanoVectorDBStorage`.
+- Run the same generated documents and embedding delay for both modes.
+
+### Hard correctness gates
+
+- Final graph node and edge counts match between baseline and treatment.
+- Final vector counts equal final graph nodes, graph edges, and text chunks.
+- Treatment performs zero embedding calls during graph ingestion.
+- Rebuild reports no failed batches or lost records.
+
+### Quality and performance metrics
+
+- End-to-end wall time: ingestion plus rebuild.
+- Ingestion-only wall time.
+- Embedding calls and embedded texts.
+- Vector write amplification:
+  `embedded texts / final vector records`.
+- Final node, edge, and chunk counts.
+
+### Pass criteria
+
+- On the high-overlap workload, treatment reduces embedded texts by at least
+  40% versus baseline.
+- Treatment end-to-end time is no more than 80% of baseline under the frozen
+  simulated embedding latency.
+- No correctness gate fails.
