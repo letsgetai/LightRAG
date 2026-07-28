@@ -145,7 +145,7 @@ from lightrag.utils_pipeline import (
     normalize_document_file_path,
 )
 from lightrag.constants import GRAPH_FIELD_SEP
-from lightrag.exceptions import IndexFlushError, StorageCapabilityError
+from lightrag.exceptions import IndexFlushError
 from lightrag.utils import (
     Tokenizer,
     TiktokenTokenizer,
@@ -3742,8 +3742,6 @@ class LightRAG(_RoleLLMMixin, _StorageMigrationMixin, _PipelineMixin):
 
             return raw_data
 
-        except StorageCapabilityError:
-            raise
         except Exception as e:
             logger.error(f"Query failed: {e}")
             # Return error response

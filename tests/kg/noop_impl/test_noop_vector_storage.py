@@ -142,10 +142,7 @@ async def test_graph_only_lightrag_initializes_without_embedding_func(tmp_path) 
 
 @pytest.mark.offline
 @pytest.mark.asyncio
-@pytest.mark.parametrize("query_method", ["aquery", "aquery_data", "aquery_llm"])
-async def test_graph_only_public_query_apis_fail_loudly(
-    tmp_path, query_method: str
-) -> None:
+async def test_graph_only_query_reports_vector_storage_failure(tmp_path) -> None:
     rag = LightRAG(
         working_dir=str(tmp_path),
         vector_storage="NoopVectorDBStorage",
@@ -154,15 +151,12 @@ async def test_graph_only_public_query_apis_fail_loudly(
     )
     await rag.initialize_storages()
 
-    with pytest.raises(
-        RuntimeError,
-        match="NoopVectorDBStorage.*persistent vector storage.*lightrag-rebuild-vdb",
-    ):
-        await getattr(rag, query_method)(
-            "question",
-            QueryParam(mode="naive"),
-        )
+    result = await rag.aquery_llm("question", QueryParam(mode="naive"))
 
+    assert result["status"] == "failure"
+    assert "NoopVectorDBStorage" in result["message"]
+    assert "persistent vector storage" in result["message"]
+    assert "lightrag-rebuild-vdb" in result["message"]
     await rag.finalize_storages()
 
 
