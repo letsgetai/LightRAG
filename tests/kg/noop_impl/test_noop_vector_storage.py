@@ -4,6 +4,7 @@ import numpy as np
 import pytest
 
 from lightrag import LightRAG, QueryParam
+from lightrag.base import DocStatus
 from lightrag.kg import STORAGE_IMPLEMENTATIONS, STORAGES
 from lightrag.kg.factory import get_storage_class
 from lightrag.kg.noop_vector_db_impl import NoopVectorDBStorage
@@ -13,6 +14,16 @@ from lightrag.tools.rebuild_vdb import (
     rebuild_relationships_vdb,
 )
 from lightrag.utils import EmbeddingFunc, compute_mdhash_id
+
+
+EXTRACTION_RESULT = "\n".join(
+    [
+        "entity<|#|>Alice<|#|>person<|#|>A person",
+        "entity<|#|>Bob<|#|>person<|#|>Another person",
+        "relation<|#|>Alice<|#|>Bob<|#|>knows<|#|>Alice knows Bob",
+        "<|COMPLETE|>",
+    ]
+)
 
 
 class FailingEmbedding:
@@ -90,6 +101,9 @@ def test_noop_vector_storage_is_registered() -> None:
     )
     assert STORAGES["NoopVectorDBStorage"] == ".kg.noop_vector_db_impl"
     assert get_storage_class("NoopVectorDBStorage") is NoopVectorDBStorage
+    assert NoopVectorDBStorage.requires_embedding_func is False
+    assert NoopVectorDBStorage.persists_vectors is False
+    assert NoopVectorDBStorage.supports_vector_queries is False
 
 
 @pytest.mark.offline
@@ -190,6 +204,117 @@ async def test_graph_only_public_query_apis_fail_loudly(
         )
 
     await rag.finalize_storages()
+
+
+@pytest.mark.offline
+@pytest.mark.asyncio
+async def test_graph_only_bypass_query_remains_available(tmp_path) -> None:
+    rag = LightRAG(
+        working_dir=str(tmp_path),
+        vector_storage="NoopVectorDBStorage",
+        llm_model_func=AsyncMock(return_value="direct answer"),
+        embedding_func=None,
+    )
+    await rag.initialize_storages()
+
+    result = await rag.aquery_llm(
+        "question",
+        QueryParam(mode="bypass", stream=False),
+    )
+
+    assert result["llm_response"]["content"] == "direct answer"
+    await rag.finalize_storages()
+
+
+@pytest.mark.offline
+@pytest.mark.asyncio
+async def test_graph_only_normal_ingestion_rebuilds_all_vector_indexes(
+    tmp_path,
+) -> None:
+    workspace = f"graph-only-{tmp_path.name}"
+    failing_embedding = FailingEmbedding()
+    graph_only_rag = LightRAG(
+        working_dir=str(tmp_path),
+        workspace=workspace,
+        vector_storage="NoopVectorDBStorage",
+        llm_model_func=AsyncMock(return_value=EXTRACTION_RESULT),
+        embedding_func=EmbeddingFunc(
+            embedding_dim=8,
+            max_token_size=512,
+            func=failing_embedding,
+        ),
+        entity_extract_max_gleaning=0,
+    )
+    await graph_only_rag.initialize_storages()
+    await graph_only_rag.ainsert(
+        "Alice knows Bob.",
+        file_paths="example.txt",
+    )
+
+    processed_docs = await graph_only_rag.doc_status.get_docs_by_status(
+        DocStatus.PROCESSED
+    )
+    assert len(processed_docs) == 1
+    doc_id, doc_status = next(iter(processed_docs.items()))
+    chunk_ids = doc_status.chunks_list
+    assert await graph_only_rag.full_docs.get_by_id(doc_id) is not None
+    assert len(chunk_ids) == 1
+    assert await graph_only_rag.text_chunks.get_by_id(chunk_ids[0]) is not None
+    assert await graph_only_rag.chunk_entity_relation_graph.has_node("Alice")
+    assert await graph_only_rag.chunk_entity_relation_graph.has_node("Bob")
+    assert await graph_only_rag.chunk_entity_relation_graph.has_edge("Alice", "Bob")
+    assert failing_embedding.call_count == 0
+    await graph_only_rag.finalize_storages()
+
+    indexed_rag = LightRAG(
+        working_dir=str(tmp_path),
+        workspace=workspace,
+        vector_storage="NanoVectorDBStorage",
+        llm_model_func=AsyncMock(return_value=""),
+        embedding_func=EmbeddingFunc(
+            embedding_dim=8,
+            max_token_size=512,
+            func=DeterministicEmbedding(),
+        ),
+    )
+    await indexed_rag.initialize_storages()
+
+    entity_stats = await rebuild_entities_vdb(
+        indexed_rag.chunk_entity_relation_graph,
+        indexed_rag.entities_vdb,
+        indexed_rag._build_global_config(),
+    )
+    relationship_stats = await rebuild_relationships_vdb(
+        indexed_rag.chunk_entity_relation_graph,
+        indexed_rag.relationships_vdb,
+        indexed_rag._build_global_config(),
+    )
+    chunk_stats = await rebuild_chunks_vdb(
+        indexed_rag.text_chunks,
+        indexed_rag.chunks_vdb,
+    )
+
+    reopened_docs = await indexed_rag.doc_status.get_docs_by_status(DocStatus.PROCESSED)
+    assert doc_id in reopened_docs
+    assert reopened_docs[doc_id].chunks_list == chunk_ids
+    assert entity_stats["rebuilt"] == 2
+    assert relationship_stats["rebuilt"] == 1
+    assert chunk_stats["rebuilt"] == 1
+    assert (
+        await indexed_rag.entities_vdb.get_by_id(
+            compute_mdhash_id("Alice", prefix="ent-")
+        )
+        is not None
+    )
+    assert (
+        await indexed_rag.relationships_vdb.get_by_id(
+            compute_mdhash_id("AliceBob", prefix="rel-")
+        )
+        is not None
+    )
+    assert await indexed_rag.chunks_vdb.get_by_id(chunk_ids[0]) is not None
+
+    await indexed_rag.finalize_storages()
 
 
 @pytest.mark.offline

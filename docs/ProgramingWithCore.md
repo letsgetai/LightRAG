@@ -631,8 +631,17 @@ OpenSearchVectorDBStorage   OpenSearch
 
 #### Graph-only ingestion
 
-Use `NoopVectorDBStorage` when a workload should extract and merge the
-knowledge graph before building vector indexes:
+`NoopVectorDBStorage` is intended for an initial or offline corpus backfill
+where the graph and KV stores are authoritative and vector indexes can be
+materialized once from the final state. It avoids embedding and persisting
+intermediate entity, relationship, and chunk revisions during ingestion.
+
+Do not use this workflow when newly inserted documents must become queryable
+immediately. Normal incremental ingestion should use the intended persistent
+vector backend from the beginning.
+
+Configure the backfill process with the no-op backend. `embedding_func=None` is
+supported when no other configured component requires embeddings:
 
 ```python
 rag = LightRAG(
@@ -644,12 +653,58 @@ rag = LightRAG(
 ```
 
 The backend accepts vector mutations without calling the embedding function or
-persisting vectors. Graph and KV writes continue normally. Vector-backed query
-modes raise an actionable error while this backend is active.
+persisting vectors. Graph, full-document, text-chunk, LLM-cache, document-status,
+and graph-recovery writes continue normally.
 
-After graph extraction, configure the intended persistent vector storage and
-run `lightrag-rebuild-vdb` to rebuild entity, relationship, and chunk indexes
-from the graph and text chunk stores.
+While `NoopVectorDBStorage` is active, only `bypass` queries are available.
+`local`, `global`, `hybrid`, `mix`, and `naive` modes require vector indexes and
+raise an error that points to `lightrag-rebuild-vdb`.
+
+If the semantic-vector (`V`) chunker is selected while `embedding_func=None`,
+it logs a warning and falls back to recursive-character chunking. Configure an
+embedding function during ingestion if semantic-vector chunk boundaries are
+required; this is separate from whether vectors are persisted.
+
+##### Switching to persistent vectors
+
+Use the following handoff procedure after the graph-only backfill completes:
+
+1. Stop the LightRAG server and every ingestion process. Do not allow any
+   writer to modify the workspace during the switch or rebuild.
+2. Keep `WORKING_DIR`, `WORKSPACE`, `LIGHTRAG_GRAPH_STORAGE`, and
+   `LIGHTRAG_KV_STORAGE` unchanged. Keep the corresponding backend connection
+   settings unchanged as well; the rebuild must read the graph and
+   `text_chunks` KV data created by the backfill.
+3. Change `LIGHTRAG_VECTOR_STORAGE` from `NoopVectorDBStorage` to the intended
+   persistent backend, such as `NanoVectorDBStorage`, `PGVectorStorage`, or
+   `MilvusVectorDBStorage`.
+4. Configure the embedding provider and the exact model and dimension that
+   normal queries and future ingestion will use. For the server configuration,
+   this includes `EMBEDDING_BINDING`, `EMBEDDING_MODEL`, `EMBEDDING_DIM`, and
+   the provider host and credentials when required.
+5. Start a new process or construct a new `LightRAG` instance. Changing
+   `vector_storage` on an existing instance is not sufficient because storage
+   classes and instances are resolved during initialization.
+6. Run `lightrag-rebuild-vdb` with the same environment and select
+   **Rebuild ALL vector storages**. This rebuilds entity vectors from graph
+   nodes, relationship vectors from graph edges, and chunk vectors from the
+   `text_chunks` KV store.
+7. Start the server only after the rebuild reports success. LightRAG currently
+   has no persisted marker that distinguishes a complete vector index from a
+   missing, interrupted, or partially rebuilt one.
+8. Leave the persistent vector backend and the same embedding configuration
+   active for normal querying and all future incremental ingestion.
+
+Rebuilding embeds every final graph and chunk record, so it can incur
+significant API cost, elapsed time, and peak memory usage on large workspaces.
+The current rebuild implementation prepares graph records and vector payloads
+before batched writes, so memory usage grows with the source data. The graph and
+KV sources are not modified: if rebuilding is interrupted or a batch fails,
+keep all writers stopped and rerun `lightrag-rebuild-vdb` with the same
+configuration.
+
+See `lightrag/tools/README_REBUILD_VDB.md` for rebuild options and operational
+details.
 
 **DOC_STATUS_STORAGE**
 ```

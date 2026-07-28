@@ -132,7 +132,12 @@ def _new_stats(label: str, source_total: int) -> Dict[str, Any]:
 
 
 def _ensure_vector_rebuild_supported(vdb) -> None:
-    if not getattr(vdb, "supports_vector_queries", True):
+    persists_vectors = getattr(
+        vdb,
+        "persists_vectors",
+        getattr(vdb, "supports_vector_queries", True),
+    )
+    if not persists_vectors:
         storage_name = type(vdb).__name__
         raise RuntimeError(
             f"{storage_name} does not persist vectors and cannot be used as a "
@@ -785,7 +790,11 @@ class RebuildTool:
                 type(storage).__name__
                 for storage in vector_storages
                 if storage is not None
-                and not getattr(storage, "supports_vector_queries", True)
+                and not getattr(
+                    storage,
+                    "persists_vectors",
+                    getattr(storage, "supports_vector_queries", True),
+                )
             }
         )
         if not unsupported_storage_names:

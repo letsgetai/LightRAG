@@ -227,21 +227,24 @@ class StorageNameSpace(ABC):
 @dataclass
 class BaseVectorStorage(StorageNameSpace, ABC):
     supports_vector_queries: ClassVar[bool] = True
+    persists_vectors: ClassVar[bool] = True
+    requires_embedding_func: ClassVar[bool] = True
 
-    embedding_func: EmbeddingFunc
+    embedding_func: EmbeddingFunc | None
     cosine_better_than_threshold: float = field(default=0.2)
     meta_fields: set[str] = field(default_factory=set)
 
     def _validate_embedding_func(self):
-        """Validate that embedding_func is provided.
+        """Validate the backend's embedding function requirement.
 
         This method should be called at the beginning of __post_init__
-        in all vector storage implementations.
+        in all vector storage implementations. Backends that never materialize
+        vectors may set ``requires_embedding_func`` to ``False``.
 
         Raises:
-            ValueError: If embedding_func is None
+            ValueError: If the backend requires embedding_func and it is None
         """
-        if self.embedding_func is None:
+        if self.requires_embedding_func and self.embedding_func is None:
             raise ValueError(
                 "embedding_func is required for vector storage. "
                 "Please provide a valid EmbeddingFunc instance."
@@ -251,12 +254,13 @@ class BaseVectorStorage(StorageNameSpace, ABC):
         """Generates collection/table suffix from embedding_func.
 
         Return suffix if model_name exists in embedding_func, otherwise return None.
-        Note: embedding_func is guaranteed to exist (validated in __post_init__).
-
         Returns:
             str | None: Suffix string e.g. "text_embedding_3_large_3072d", or None if model_name not available
         """
         import re
+
+        if self.embedding_func is None:
+            return None
 
         # Check if model_name exists (model_name is optional in EmbeddingFunc)
         model_name = getattr(self.embedding_func, "model_name", None)

@@ -3335,7 +3335,7 @@ class LightRAG(_RoleLLMMixin, _StorageMigrationMixin, _PipelineMixin):
             {
                 type(storage).__name__
                 for storage in vector_storages
-                if not storage.supports_vector_queries
+                if not getattr(storage, "supports_vector_queries", True)
             }
         )
         if unsupported_storage_names:
@@ -3657,7 +3657,8 @@ class LightRAG(_RoleLLMMixin, _StorageMigrationMixin, _PipelineMixin):
         Returns:
             dict[str, Any]: Complete response with structured data and LLM response.
         """
-        self._ensure_vector_query_supported(param.mode)
+        if param.mode != "bypass":
+            self._ensure_vector_query_supported(param.mode)
         logger.debug(f"[aquery_llm] Query param: {param}")
 
         global_config = self._build_global_config()
