@@ -16,7 +16,6 @@ from typing import (
     Dict,
     List,
     AsyncIterator,
-    ClassVar,
 )
 from .utils import EmbeddingFunc, get_env_value
 from .types import KnowledgeGraph
@@ -226,8 +225,6 @@ class StorageNameSpace(ABC):
 
 @dataclass
 class BaseVectorStorage(StorageNameSpace, ABC):
-    supports_vector_queries: ClassVar[bool] = True
-    persists_vectors: ClassVar[bool] = True
     requires_embedding_func: ClassVar[bool] = True
 
     embedding_func: EmbeddingFunc | None
@@ -254,13 +251,12 @@ class BaseVectorStorage(StorageNameSpace, ABC):
         """Generates collection/table suffix from embedding_func.
 
         Return suffix if model_name exists in embedding_func, otherwise return None.
+        Note: embedding_func is guaranteed to exist (validated in __post_init__).
+
         Returns:
             str | None: Suffix string e.g. "text_embedding_3_large_3072d", or None if model_name not available
         """
         import re
-
-        if self.embedding_func is None:
-            return None
 
         # Check if model_name exists (model_name is optional in EmbeddingFunc)
         model_name = getattr(self.embedding_func, "model_name", None)

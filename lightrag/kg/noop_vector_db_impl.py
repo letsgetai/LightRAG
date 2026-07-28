@@ -17,7 +17,6 @@ class NoopVectorDBStorage(BaseVectorStorage):
     """
 
     supports_vector_queries: ClassVar[bool] = False
-    persists_vectors: ClassVar[bool] = False
     requires_embedding_func: ClassVar[bool] = False
 
     def __post_init__(self) -> None:
