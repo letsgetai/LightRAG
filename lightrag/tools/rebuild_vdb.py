@@ -61,6 +61,7 @@ from lightrag.constants import (
     DEFAULT_COSINE_THRESHOLD,
     DEFAULT_EMBEDDING_BATCH_NUM,
 )
+from lightrag.exceptions import StorageCapabilityError
 from lightrag.kg import STORAGE_ENV_REQUIREMENTS
 from lightrag.namespace import NameSpace
 from lightrag.utils import (
@@ -132,9 +133,9 @@ def _new_stats(label: str, source_total: int) -> Dict[str, Any]:
 
 
 def _ensure_vector_rebuild_supported(vdb) -> None:
-    if not getattr(vdb, "supports_vector_queries", True):
+    if not getattr(vdb, "persists_vectors", True):
         storage_name = type(vdb).__name__
-        raise RuntimeError(
+        raise StorageCapabilityError(
             f"{storage_name} does not persist vectors and cannot be used as a "
             "rebuild target. Configure a persistent vector storage before "
             "calling the rebuild library API."
@@ -774,29 +775,6 @@ class RebuildTool:
             self.text_chunks,
         ]
 
-    def vector_rebuild_unavailable_reason(self) -> str | None:
-        vector_storages = (
-            self.entities_vdb,
-            self.relationships_vdb,
-            self.chunks_vdb,
-        )
-        unsupported_storage_names = sorted(
-            {
-                type(storage).__name__
-                for storage in vector_storages
-                if storage is not None
-                and not getattr(storage, "supports_vector_queries", True)
-            }
-        )
-        if not unsupported_storage_names:
-            return None
-
-        storage_names = ", ".join(unsupported_storage_names)
-        return (
-            f"{storage_names} does not persist vectors. Configure a persistent "
-            "vector storage before running `lightrag-rebuild-vdb`."
-        )
-
     # ------------------------------------------------------------------
     # CLI helpers
     # ------------------------------------------------------------------
@@ -1009,15 +987,12 @@ class RebuildTool:
                 return False
 
             while True:
-                rebuild_unavailable_reason = self.vector_rebuild_unavailable_reason()
                 print("\n=== Rebuild Options ===")
                 print("[1] Consistency check (diagnose only; no rebuild)")
-                if self.embedding_available and rebuild_unavailable_reason is None:
+                if self.embedding_available:
                     print("[2] Rebuild entities + relationships VDB")
                     print("[3] Rebuild chunks VDB")
                     print("[4] Rebuild ALL vector storages")
-                elif rebuild_unavailable_reason is not None:
-                    print(f"[2-4] (unavailable - {rebuild_unavailable_reason})")
                 else:
                     print("[2-4] (unavailable - embedding requires the api extra)")
                 print("[0] Exit")
@@ -1038,11 +1013,6 @@ class RebuildTool:
                         'Install the api extra: pip install "lightrag-hku[api]"'
                     )
                     continue
-                if rebuild_unavailable_reason is not None:
-                    print(f"✗ Rebuild unavailable: {rebuild_unavailable_reason}")
-                    success = False
-                    continue
-
                 include_graph = choice in ("2", "4")
                 include_chunks = choice in ("3", "4")
                 targets = {

@@ -5,6 +5,7 @@ import pytest
 
 from lightrag import LightRAG, QueryParam
 from lightrag.base import DocStatus
+from lightrag.exceptions import StorageCapabilityError
 from lightrag.kg import STORAGE_IMPLEMENTATIONS, STORAGES
 from lightrag.kg.factory import get_storage_class
 from lightrag.kg.noop_vector_db_impl import NoopVectorDBStorage
@@ -63,7 +64,7 @@ def test_noop_vector_storage_is_registered() -> None:
     assert STORAGES["NoopVectorDBStorage"] == ".kg.noop_vector_db_impl"
     assert get_storage_class("NoopVectorDBStorage") is NoopVectorDBStorage
     assert NoopVectorDBStorage.requires_embedding_func is False
-    assert NoopVectorDBStorage.supports_vector_queries is False
+    assert NoopVectorDBStorage.persists_vectors is False
 
 
 @pytest.mark.offline
@@ -93,6 +94,31 @@ async def test_noop_vector_storage_contract_never_embeds() -> None:
         await storage.query("question", top_k=5)
 
     await storage.finalize()
+
+
+@pytest.mark.offline
+@pytest.mark.asyncio
+@pytest.mark.parametrize("target", ["entities", "relationships", "chunks"])
+async def test_noop_vector_storage_cannot_be_rebuild_target(target: str) -> None:
+    source = AsyncMock()
+    storage = NoopVectorDBStorage(
+        namespace="test_vectors",
+        workspace="test_workspace",
+        global_config={},
+        embedding_func=None,
+    )
+    rebuild_call = {
+        "entities": lambda: rebuild_entities_vdb(source, storage, {}),
+        "relationships": lambda: rebuild_relationships_vdb(source, storage, {}),
+        "chunks": lambda: rebuild_chunks_vdb(source, storage),
+    }[target]
+
+    with pytest.raises(
+        StorageCapabilityError, match="cannot be used as a rebuild target"
+    ):
+        await rebuild_call()
+
+    assert source.mock_calls == []
 
 
 @pytest.mark.offline

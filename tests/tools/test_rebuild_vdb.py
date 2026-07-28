@@ -890,31 +890,6 @@ async def test_run_returns_false_on_setup_failure(monkeypatch):
 
 
 @pytest.mark.asyncio
-async def test_run_rejects_rebuild_for_non_queryable_vector_storage(
-    monkeypatch, capsys
-):
-    tool = _runnable_tool(monkeypatch, iter(["4", "0"]))
-    tool.setup_storages = AsyncMock(return_value=True)
-    tool.embedding_available = True
-    disabled_storage = SimpleNamespace(supports_vector_queries=False)
-    tool.entities_vdb = disabled_storage
-    tool.relationships_vdb = disabled_storage
-    tool.chunks_vdb = disabled_storage
-    tool.print_source_counts = AsyncMock()
-    tool.run_rebuild_entities_relations = AsyncMock()
-    tool.run_rebuild_chunks = AsyncMock()
-
-    assert await tool.run() is False
-
-    output = capsys.readouterr().out
-    assert "does not persist vectors" in output
-    assert "persistent vector storage" in output
-    tool.print_source_counts.assert_not_awaited()
-    tool.run_rebuild_entities_relations.assert_not_awaited()
-    tool.run_rebuild_chunks.assert_not_awaited()
-
-
-@pytest.mark.asyncio
 async def test_run_returns_false_on_unhandled_exception(monkeypatch):
     tool = _runnable_tool(monkeypatch, iter([]))
     tool.setup_storages = AsyncMock(side_effect=RuntimeError("db down"))

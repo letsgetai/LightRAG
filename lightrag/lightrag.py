@@ -145,7 +145,7 @@ from lightrag.utils_pipeline import (
     normalize_document_file_path,
 )
 from lightrag.constants import GRAPH_FIELD_SEP
-from lightrag.exceptions import IndexFlushError
+from lightrag.exceptions import IndexFlushError, StorageCapabilityError
 from lightrag.utils import (
     Tokenizer,
     TiktokenTokenizer,
@@ -3322,16 +3322,6 @@ class LightRAG(_RoleLLMMixin, _StorageMigrationMixin, _PipelineMixin):
             if update_storage:
                 await self._insert_done_with_cleanup()
 
-    def _ensure_vector_query_supported(self, mode: str) -> None:
-        storage = self.chunks_vdb
-        if getattr(storage, "supports_vector_queries", True):
-            return
-        raise RuntimeError(
-            f"{type(storage).__name__} cannot serve vector retrieval mode "
-            f"'{mode}'. Configure a persistent vector storage and run "
-            "`lightrag-rebuild-vdb` before querying."
-        )
-
     def query(
         self,
         query: str,
@@ -3525,8 +3515,6 @@ class LightRAG(_RoleLLMMixin, _StorageMigrationMixin, _PipelineMixin):
             actual data is nested under the 'data' field, with 'status' and 'message'
             fields at the top level.
         """
-        if param.mode != "bypass":
-            self._ensure_vector_query_supported(param.mode)
         global_config = self._build_global_config()
 
         # Create a copy of param to avoid modifying the original
@@ -3643,8 +3631,6 @@ class LightRAG(_RoleLLMMixin, _StorageMigrationMixin, _PipelineMixin):
         Returns:
             dict[str, Any]: Complete response with structured data and LLM response.
         """
-        if param.mode != "bypass":
-            self._ensure_vector_query_supported(param.mode)
         logger.debug(f"[aquery_llm] Query param: {param}")
 
         global_config = self._build_global_config()
@@ -3756,6 +3742,8 @@ class LightRAG(_RoleLLMMixin, _StorageMigrationMixin, _PipelineMixin):
 
             return raw_data
 
+        except StorageCapabilityError:
+            raise
         except Exception as e:
             logger.error(f"Query failed: {e}")
             # Return error response

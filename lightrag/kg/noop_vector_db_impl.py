@@ -4,6 +4,7 @@ from dataclasses import dataclass
 from typing import Any, ClassVar, final
 
 from lightrag.base import BaseVectorStorage
+from lightrag.exceptions import StorageCapabilityError
 
 
 @final
@@ -16,8 +17,8 @@ class NoopVectorDBStorage(BaseVectorStorage):
     before using retrieval modes that query vector indexes.
     """
 
-    supports_vector_queries: ClassVar[bool] = False
     requires_embedding_func: ClassVar[bool] = False
+    persists_vectors: ClassVar[bool] = False
 
     def __post_init__(self) -> None:
         self._validate_embedding_func()
@@ -28,7 +29,7 @@ class NoopVectorDBStorage(BaseVectorStorage):
         top_k: int,
         query_embedding: list[float] | None = None,
     ) -> list[dict[str, Any]]:
-        raise RuntimeError(
+        raise StorageCapabilityError(
             "Vector retrieval is disabled by NoopVectorDBStorage. "
             "Configure a persistent vector storage and run "
             "`lightrag-rebuild-vdb` before querying."
